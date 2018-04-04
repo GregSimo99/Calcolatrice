@@ -20,20 +20,15 @@ public class RisultatoActivity extends AppCompatActivity implements View.OnClick
         final Intent partenza=getIntent();
         int n1=partenza.getIntExtra("n1",0);
         int n2=partenza.getIntExtra("n2",0);
-        Log.i("numero", ""+n1);
-        Log.i("numero", ""+n2);
+
         switch (partenza.getStringExtra("operazione")){
             case"+":    risultato=n1+n2;
-                Log.i("operazione", "+");
                         break;
             case"-":    risultato=n1-n2;
-                Log.i("operazione", "-");
                         break;
-            case"*":    risultato=n1*n2;
-                Log.i("operazione", "*");
+            case"x":    risultato=n1*n2;
                         break;
             case"/":    risultato=n1/n2;
-                Log.i("operazione", "/");
                         break;
         }
         torna=findViewById(R.id.btnTorna);
@@ -41,9 +36,6 @@ public class RisultatoActivity extends AppCompatActivity implements View.OnClick
         Trisultato=findViewById(R.id.risultato);
         Trisultato.setText(""+risultato);
     }
-    //public void TornaIndietro(){
-
-    //}
 
     @Override
     public void onClick(View view) {

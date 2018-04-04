@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("n1",n1);
         intent.putExtra("n2",Integer.parseInt(nAttuale.getText().toString()));
         intent.putExtra("operazione",operazione);
-        Log.i("numero", "text: "+Integer.parseInt(nAttuale.getText().toString()));
         startActivity(intent);
     }
 }
